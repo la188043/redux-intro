@@ -1,11 +1,12 @@
-import { useSelector, useDispatch, RootStateOrAny } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import createAction from '../utils/createAction.utils';
 
 import { INCREMENT, DECREMENT } from '../actions/counter.actionTypes';
+import { RootState } from '../reducers/RootState';
 
 const Counter = () => {
-  const counter = useSelector((state: RootStateOrAny) => state.counter);
+  const counter = useSelector((state: RootState) => state.counter);
 
   const dispatch = useDispatch();
 

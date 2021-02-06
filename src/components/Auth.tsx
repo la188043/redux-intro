@@ -1,11 +1,12 @@
-import { useSelector, useDispatch, RootStateOrAny } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import createAction from '../utils/createAction.utils';
 
 import { SIGN_IN, SIGN_OUT } from '../actions/auth.actionTypes';
+import { RootState } from '../reducers/RootState';
 
 const Auth = () => {
-  const isLogged = useSelector((state: RootStateOrAny) => state.auth);
+  const isLogged = useSelector((state: RootState) => state.auth);
 
   const dispatch = useDispatch();
 
